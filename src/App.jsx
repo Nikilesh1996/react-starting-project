@@ -1,10 +1,14 @@
-
 import CoreConcepts from "./components/CoreConcepts";
 import Header from "./components/Header/Header";
 import TabButton from "./components/TabButton";
 import { CORE_CONCEPTS } from "./data";
 
 function App() {
+  function handleSelect(param) {
+    console.log("Hello world from the button selected!");
+    console.log(param);
+  }
+
   return (
     <div>
       <Header />
@@ -26,11 +30,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={handleSelect}>Components</TabButton>
+            <TabButton onSelect={handleSelect}>JSX</TabButton>
+            <TabButton onSelect={handleSelect}>Props</TabButton>
+            <TabButton onSelect={handleSelect}>State</TabButton>
           </menu>
+          {/* Output my dynamic component */}
         </section>
         <h2>Time to get started!</h2>
       </main>
