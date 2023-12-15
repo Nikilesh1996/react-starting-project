@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import CoreConcepts from "./components/CoreConcepts";
 import Header from "./components/Header/Header";
 import TabButton from "./components/TabButton";
@@ -28,7 +28,8 @@ function App() {
   }
 
   return (
-    <div>
+    /*Can also be <Fragment></Fragment> */
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -87,7 +88,7 @@ function App() {
         </section>
         <h2>Time to get started!</h2>
       </main>
-    </div>
+    </>
   );
 }
 
